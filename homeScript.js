@@ -4,9 +4,8 @@ var projectList = [
 ]
 
 function afterPageLoad() {
-    let i = 0;
     projectList.forEach(element => {
-        $(projects-container).append(element.title)
+        $(projects-container).append($("<h2></h2>").text(element.title).attr("href",element.href))
     });
     
 }
